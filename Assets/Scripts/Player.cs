@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator playerVisualsAnimator;
 
     [Header("Attack")] public Vector2[] attackVelocity;
-    public Vector2 jumpAttackVelocity;
     public float attackVelocityDuration = 0.1f;
     public float comboResetTime = 1;
 
