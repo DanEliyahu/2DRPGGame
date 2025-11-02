@@ -1,4 +1,4 @@
-public class PlayerAiredState : EntityState
+public class PlayerAiredState : PlayerState
 {
     protected PlayerAiredState(Player player, StateMachine stateMachine, string animBoolName) : base(player,
         stateMachine, animBoolName)

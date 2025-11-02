@@ -1,4 +1,4 @@
-public abstract class PlayerGroundedState : EntityState
+public abstract class PlayerGroundedState : PlayerState
 {
     protected PlayerGroundedState(Player player, StateMachine stateMachine, string animBoolName) : base(player,
         stateMachine, animBoolName)

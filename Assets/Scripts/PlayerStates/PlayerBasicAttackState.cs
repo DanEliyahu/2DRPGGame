@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerBasicAttackState : EntityState
+public class PlayerBasicAttackState : PlayerState
 {
     private static readonly int BasicAttackIndex = Animator.StringToHash("BasicAttackIndex");
     private const int FirstComboIndex = 1; // Combo starts with 1, this is used in the Animator.
