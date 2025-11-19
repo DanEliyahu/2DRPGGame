@@ -3,6 +3,7 @@ using System;
 public class StateMachine
 {
     public EntityState CurrentState { get; private set; }
+    private bool canChangeState = true;
 
     private StateSwitchedException stateSwitchedException;
 
@@ -15,6 +16,9 @@ public class StateMachine
 
     public void ChangeState(EntityState newState)
     {
+        if (!canChangeState)
+            return;
+
         CurrentState.Exit();
         CurrentState = newState;
         CurrentState.Enter();
@@ -32,4 +36,6 @@ public class StateMachine
             if (e is not StateSwitchedException) throw;
         }
     }
+
+    public void SwitchOffStateMachine() => canChangeState = false;
 }
